@@ -44,10 +44,27 @@ def grouping_reNcords_together_based_on_a_field():
     ]
     from itertools import groupby
     sorted(rows, key=lambda a: a["date"])
-    iter = groupby(rows, key=lambda a: a["date"])
-    for i in iter():
-        print(i)
+    group_iter = groupby(rows, key=lambda a: a["date"])
+    for tag, list_iter in group_iter:
+        print(tag)
+        for list_item in list_iter:
+            print(list_item)
+
+
+def multi_dict():
+    """
+        一键多值字典
+    """
+    from collections import defaultdict
+    a = defaultdict(list)
+    a["a"].append("123")
+    a["a"].append("345")
+    print(a["a"])
+
+def sort_a_list_of_dictionaries_by_a_common_key():
+    pass
 
 
 if __name__ == '__main__':
-    grouping_reNcords_together_based_on_a_field()
+    # grouping_reNcords_together_based_on_a_field()
+    multi_dict()

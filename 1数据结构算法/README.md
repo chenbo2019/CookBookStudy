@@ -60,4 +60,22 @@ class PriorityQueue:
 ```
 
 ## lesson3
+* 查找字典共同key
+```
+a = {}
+b = {}
+a.keys() & b.keys()
+```
+* 列表数据根据某字段分组
+```
+from itertools import groupby
+groupby(iterater, key=xxx)
+```
+* 多值字典
+```
+from collections import defaultdict
+a = defaultdict(list)
+a["a"].append("123")
+a["a"].append("345")
+```
 

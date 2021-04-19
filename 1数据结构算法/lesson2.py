@@ -7,10 +7,6 @@
 """
 import heapq
 
-"""
-    源码解析
-"""
-
 
 class PriorityQueue:
     """
